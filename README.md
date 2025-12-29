@@ -1,5 +1,6 @@
 # Prediction-Product-Sale 
-The prediction of product sales is an overview of the products and o
+This project analyzes food sales across various retail outlets to identify the specific products and store locations that drive growth.
+This project provides retailers with data-driven insights to help them focus on their most profitable assets
 
 - Summary: I performed a comprehensive Exploratory Data Analysis (EDA), starting with data cleaning to remove duplicates, handle missing values, and resolve inconsistencies. Once the data was refined, I utilized data visualization techniques to examine feature relationships and uncover key patterns, ensuring a high-quality dataset for production.
 
