@@ -32,3 +32,6 @@ This project provides retailers with data-driven insights to help them focus on 
 
 - Modeling Step
   - During the modeling phase, the dataset was separated into ordinal, categorical, and numerical features. Missing values were imputed, categorical features were encoded, and numerical features were scaled when appropriate. Separate preprocessing pipelines were created for each feature type and combined using a ColumnTransformer to ensure consistent and reproducible data preparation.
+ 
+  - First Model: Linear Regression
+    - A linear regression model was built using a pipeline that combined preprocessing and modeling. After fitting, the training and testing metrics were very close, indicating that the model had learned the patterns well and generalized effectively to unseen data.
