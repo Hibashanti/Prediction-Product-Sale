@@ -47,7 +47,7 @@ This project provides retailers with data-driven insights to help them focus on 
    -  R^2 = 0.567
 
 
-  - Second Model: The Random Forest Model (Recommended)
+ - Second Model: The Random Forest Model (Recommended)
 
     - The Random Forest model is recommended as the final model due to its superior predictive performance and better generalization compared to the linear models.
    - The model achieves an R² of approximately 0.60 on test data, meaning it explains about 60% of the variability in Item_Outlet_Sales.
@@ -64,18 +64,18 @@ This project provides retailers with data-driven insights to help them focus on 
      - The model generalizes well but is not perfectly fitted, likely due to missing key predictors rather than insufficient model complexity.
 
  -  The metrics for the Tuined Model are:
-    - Regression Metrics: Training Data
-      - MAE = 664.034
-      - MSE = 896,591.868
-      - RMSE = 946.885
-      - R^2 = 0.697
+     - Regression Metrics: Training Data
+       - MAE = 664.034
+       - MSE = 896,591.868
+       - RMSE = 946.885
+       - R^2 = 0.697
 
-    - Regression Metrics: Testing Data
-     - MAE = 734.312
-     - MSE = 1,099,779.311
-     - RMSE = 1,048.704
-     - R^2 = 0.601
+     - Regression Metrics: Testing Data
+      - MAE = 734.312
+      - MSE = 1,099,779.311
+      - RMSE = 1,048.704
+      - R^2 = 0.601
 
        
-- - Conclusion
- - The Random Forest model provides a balanced trade-off between accuracy and generalization, making it the most reliable choice for this dataset. Further improvements would require additional relevant features rather than a more complex model.
+- Conclusion
+  - The Random Forest model provides a balanced trade-off between accuracy and generalization, making it the most reliable choice for this dataset. Further improvements would require additional relevant features rather than a more complex model.
