@@ -34,4 +34,23 @@ This project provides retailers with data-driven insights to help them focus on 
   - During the modeling phase, the dataset was separated into ordinal, categorical, and numerical features. Missing values were imputed, categorical features were encoded, and numerical features were scaled when appropriate. Separate preprocessing pipelines were created for each feature type and combined using a ColumnTransformer to ensure consistent and reproducible data preparation.
  
   - First Model: Linear Regression
-    - A linear regression model was built using a pipeline that combined preprocessing and modeling. After fitting, the training and testing metrics were very close, indicating that the model had learned the patterns well and generalized effectively to unseen data.
+    - A linear regression model was built using a pipeline that combined preprocessed data and the model defined. The metrics(mainly the R-squared) on training and testing data suggest the model is underfitted. The metrics are as follows: 
+    -   Regression Metrics: Training Data
+------------------------------------------------------------
+  -  MAE = 847.129
+  -  MSE = 1,297,558.136
+  -  RMSE = 1,139.104
+  -  R^2 = 0.562
+
+------------------------------------------------------------
+  - Regression Metrics: Test Data
+------------------------------------------------------------
+  -  MAE = 804.120
+  -  MSE = 1,194,349.715
+  -  RMSE = 1,092.863
+  -  R^2 = 0.567
+
+
+-  Second Model: The Random Forest Model
+  - The metrics of the default Random Forest showed the model is overfitting; the training data R-squared was higher than the R-squared on the testing data. Thus, we go for tuning the model
+  - The Tunied Random Forest becomes well-fitted. The R-squared explains almost %60 of the data, which is an acceptable range in real-world item_outlet_sales prediction.
