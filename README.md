@@ -34,23 +34,48 @@ This project provides retailers with data-driven insights to help them focus on 
   - During the modeling phase, the dataset was separated into ordinal, categorical, and numerical features. Missing values were imputed, categorical features were encoded, and numerical features were scaled when appropriate. Separate preprocessing pipelines were created for each feature type and combined using a ColumnTransformer to ensure consistent and reproducible data preparation.
  
   - First Model: Linear Regression
-    - A linear regression model was built using a pipeline that combined preprocessed data and the model defined. The metrics(mainly the R-squared) on training and testing data suggest the model is underfitted. The metrics are as follows: 
+    - A linear regression model was built using a pipeline that combined preprocessed data and the model defined. The metrics (mainly the R-squared) on both the training and testing data suggest that the model is underfitted. The metrics are as follows: 
     -   Regression Metrics: Training Data
-------------------------------------------------------------
-  -  MAE = 847.129
-  -  MSE = 1,297,558.136
-  -  RMSE = 1,139.104
-  -  R^2 = 0.562
-
-------------------------------------------------------------
-  - Regression Metrics: Test Data
-------------------------------------------------------------
-  -  MAE = 804.120
-  -  MSE = 1,194,349.715
-  -  RMSE = 1,092.863
-  -  R^2 = 0.567
+   -  MAE = 847.129
+   -  MSE = 1,297,558.136
+   -  RMSE = 1,139.104
+   -  R^2 = 0.562
+    -   Regression Metrics: Testing Data
+   -  MAE = 804.120
+   -  MSE = 1,194,349.715
+   -  RMSE = 1,092.863
+   -  R^2 = 0.567
 
 
--  Second Model: The Random Forest Model
-  - The metrics of the default Random Forest showed the model is overfitting; the training data R-squared was higher than the R-squared on the testing data. Thus, we go for tuning the model
-  - The Tunied Random Forest becomes well-fitted. The R-squared explains almost %60 of the data, which is an acceptable range in real-world item_outlet_sales prediction.
+  - Second Model: The Random Forest Model (Recommended)
+
+    - The Random Forest model is recommended as the final model due to its superior predictive performance and better generalization compared to the linear models.
+   - The model achieves an R² of approximately 0.60 on test data, meaning it explains about 60% of the variability in Item_Outlet_Sales.
+   - The MAE is around 700 units, which is acceptable given that:
+      - The average sales value is ~2,200 units
+      - The maximum sales value exceeds 13,000 units, this indicates that the model’s prediction error is reasonable relative to the scale of the target variable.
+
+   - R² Interpretation (Non-Technical) :
+     - The Random Forest model explains about 60% of the uncertainty in product sales. The remaining 40% is influenced by external factors such as promotions, customer behavior, and store-specific conditions that are not captured in the dataset.
+
+   - Overfitting / Underfitting Analysis
+     - Training R² ≈ 0.69, Test R² ≈ 0.60
+     - The moderate gap between training and test performance indicates controlled overfitting.
+     - The model generalizes well but is not perfectly fitted, likely due to missing key predictors rather than insufficient model complexity.
+
+ -  The metrics for the Tuined Model are:
+    - Regression Metrics: Training Data
+      - MAE = 664.034
+      - MSE = 896,591.868
+      - RMSE = 946.885
+      - R^2 = 0.697
+
+    - Regression Metrics: Testing Data
+     - MAE = 734.312
+     - MSE = 1,099,779.311
+     - RMSE = 1,048.704
+     - R^2 = 0.601
+
+       
+- - Conclusion
+ - The Random Forest model provides a balanced trade-off between accuracy and generalization, making it the most reliable choice for this dataset. Further improvements would require additional relevant features rather than a more complex model.
