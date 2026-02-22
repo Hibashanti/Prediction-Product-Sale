@@ -81,3 +81,12 @@ This project provides retailers with data-driven insights to help them focus on 
        
 - Conclusion
   - The Random Forest model provides a balanced trade-off between accuracy and generalization, making it the most reliable choice for this dataset. Further improvements would require additional relevant features rather than a more complex model.
+
+- Recommendations
+ - There could be more advanced feature engineering to reorganize the features and capture hidden patterns that influence the target variable.
+
+
+- Limitations
+   - The dataset does not include external factors such as promotions, holidays, seasonality, or customer behavior, which likely explain part of the remaining unexplained variance.
+   - The dataset does not contain a time variable, so the model predicts sales based on static features rather than capturing trends, seasonality, or time-based patterns.
+  
