@@ -1,4 +1,6 @@
 # Prediction-Product-Sale 
+Author: Hiba Shanti
+
 This project analyzes food sales across various retail outlets to identify the specific products and store locations that drive growth.
 This project provides retailers with data-driven insights to help them focus on their most profitable assets
 
