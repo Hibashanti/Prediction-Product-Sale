@@ -49,7 +49,19 @@ This project provides retailers with data-driven insights to help them focus on 
    -  R^2 = 0.567
 
 
- - Second Model: The Random Forest Model (Recommended)
+- Visualizing Linear Regression Coefficients:
+   <img width="710" height="435" alt="coef" src="https://github.com/user-attachments/assets/6fb8daa7-5c5b-4ddd-aaea-1eb9f29f3b61" />
+
+The model predicts baseline sales of about 1,900 units and shows that higher-priced items tend to sell more. Outlet type also matters, with grocery stores generally seeing lower sales than other outlets. These insights highlight which products and stores drive overall sales, supporting data-driven decisions.
+
+
+
+
+
+
+
+
+- Second Model: The Random Forest Model (Recommended)
 
     - The Random Forest model is recommended as the final model due to its superior predictive performance and better generalization compared to the linear models.
    - The model achieves an R² of approximately 0.60 on test data, meaning it explains about 60% of the variability in Item_Outlet_Sales.
