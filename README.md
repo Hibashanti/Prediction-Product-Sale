@@ -90,6 +90,13 @@ The model predicts baseline sales of about 1,900 units and shows that higher-pri
       - RMSE = 1,048.704
       - R^2 = 0.601
 
+
+- Visualize the feature importances of the Random Forest Model
+  <img width="892" height="546" alt="Screen Shot 2026-02-23 at 4 15 10 PM" src="https://github.com/user-attachments/assets/ac24dce6-c0f8-41e2-b2fa-c1bb5ca067af" />
+
+ - The graph shows the top 5 most important features that influence the sales
+ - Sales are mainly driven by price, as it is the most influential feature in the model. Store type also plays a meaningful but secondary role, while product characteristics such as visibility and weight have a smaller impact. Overall, the model is strongly price-driven, with other variables serving to refine the predictions rather than dominate them. 
+
        
 - Conclusion
   - The Random Forest model provides a balanced trade-off between accuracy and generalization, making it the most reliable choice for this dataset. Further improvements would require additional relevant features rather than a more complex model.
